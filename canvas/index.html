@@ -91,7 +91,9 @@
             });
             scene2.init();
             scene2.pre();
-            //console.log("scene");
+            stage.on("contentClick", function() {
+              scene1.pass();
+            });
           }
         });
       }
@@ -143,31 +145,33 @@
         });
 
         // 创建一个柱状图对象
-        var data = [{
-          name: '前端',
-          value: '.8',
-          color: 'green'
-        }, {
-          name: 'PHP',
-          value: '.3',
-          color: 'blue'
-        }, {
-          name: 'Java',
-          value: '.7',
-          color: 'red'
-        }, {
-          name: 'UI',
-          value: '.9',
-          color: 'yellow'
-        }, {
-          name: 'IOS',
-          value: '.4',
-          color: 'purple'
-        }, {
-          name: 'Android',
-          value: '.9',
-          color: '#daa000'
-        }];
+        var data = [
+          {
+            name: '前端',
+            value: '.8',
+            color: 'green'
+          }, {
+            name: 'PHP',
+            value: '.3',
+            color: 'blue'
+          }, {
+            name: 'Java',
+            value: '.7',
+            color: 'red'
+          }, {
+            name: 'UI',
+            value: '.9',
+            color: 'yellow'
+          }, {
+            name: 'IOS',
+            value: '.4',
+            color: 'purple'
+          }, {
+            name: 'Android',
+            value: '.9',
+            color: '#daa000'
+          }
+        ];
         this.histogram = new Histogram({
           data: data,
           x: 1 / 8 * stage.width(),
@@ -208,9 +212,9 @@
           duration: 1,
           onFinish: function() {
             _this.pass();
-            /*stage.on("contentClick", function() {
+            stage.on("contentClick", function() {
               scene2.pass();
-            });*/
+            });
           }
         });
         this.histogram.moveTo();
@@ -245,6 +249,9 @@
             //第三个页面
             scene3.init();
             scene3.pre();
+            stage.on("contentClick", function() {
+              scene2.pass();
+            });
           }
         });
       }
@@ -398,8 +405,12 @@
             _this.layerArr.forEach(function(item, index) {
               item.destroy();
             });
-
-            //
+            //第三个页面
+            scene4.init();
+            scene4.pre();
+            stage.on("contentClick", function() {
+              scene3.pass();
+            });
           }
         });
       }
