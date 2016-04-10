@@ -2,13 +2,15 @@
 * @Author: Administrator
 * @Date:   2016-02-03 10:57:03
 * @Last Modified by:   Administrator
-* @Last Modified time: 2016-02-17 17:28:10
+* @Last Modified time: 2016-04-10 08:28:49
 */
 
 
 /* 顶部区域 */
 
-#header {}
+#header {
+  width: 100%;
+}
 
 #header .topbar {
   padding-top: 12px;
@@ -80,6 +82,7 @@
   height: 40px;
   background: url(../images/neryearlogo.png) 0 40px;
   border-bottom: 1px solid #DD2525;
+  position: relative;
 }
 
 #header .navb .narbar-left li {
@@ -141,7 +144,8 @@
   text-align: center;
   color: #fff;
   background-color: rgba(192, 41, 50, 0.7);
-  position: relative;
+  position: absolute;
+  right: 0;
 }
 
 #header .navb .narbar-right span {
