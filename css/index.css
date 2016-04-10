@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2016-02-03 10:57:03
 * @Last Modified by:   Administrator
-* @Last Modified time: 2016-04-10 08:28:49
+* @Last Modified time: 2016-04-10 08:34:04
 */
 
 
@@ -79,6 +79,7 @@
 /* 导航栏  */
 
 #header .navb {
+  width: 100%;
   height: 40px;
   background: url(../images/neryearlogo.png) 0 40px;
   border-bottom: 1px solid #DD2525;
@@ -145,7 +146,7 @@
   color: #fff;
   background-color: rgba(192, 41, 50, 0.7);
   position: absolute;
-  right: 0;
+  right: 125px;
 }
 
 #header .navb .narbar-right span {
